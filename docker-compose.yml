@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  ecr-tutorial:
+    build: .  # 同ディレクトリに配置したDockerfileをビルド
+    tty: true  # docker-compose downをするまでコンテナをupした状態にする
+    image: ecr-tutorial  # image名
+    ports:
+      - "127.0.0.1:9000:8080"  # localhost:9000で待ち受け
